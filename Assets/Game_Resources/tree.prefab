@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2490679055803431289}
   - component: {fileID: 2490679055803431290}
-  - component: {fileID: 2490679055803431291}
   - component: {fileID: 2490679055803431292}
   - component: {fileID: 2490679055803431293}
+  - component: {fileID: 5990969010390558090}
   m_Layer: 0
   m_Name: tree
   m_TagString: Untagged
@@ -30,7 +30,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.55, y: -2.2777, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5741, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,12 +45,10 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -87,20 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2490679055803431291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2490679055803431294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e8304260840df444bb80585859f65a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartTimeBtwSpawn: 6
-  tree: {fileID: 2490679055803431294}
 --- !u!50 &2490679055803431292
 Rigidbody2D:
   serializedVersion: 4
@@ -148,3 +131,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.11, y: 6}
   m_EdgeRadius: 0
+--- !u!114 &5990969010390558090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2490679055803431294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f359fba3e87c68d4db28c258f56a72dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.05

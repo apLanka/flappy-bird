@@ -1128,6 +1128,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pipes: {fileID: 5122742057862832392, guid: 65bbaf6d08e9bcc46a177c81e903e7e1, type: 3}
+  tree: {fileID: 2490679055803431294, guid: 7343b0ebdb4846b49b57d794264ae8e7, type: 3}
+  timeSpwan: 0
+  startTimeSpwan: 2
+  treeTimeSpwan: 0
+  treeStartTimeSpwan: 0
+  spwanPos: {x: 0, y: 0, z: 0}
+  treeSpwanPos: {x: 0, y: 0, z: 0}
 --- !u!4 &397730860
 Transform:
   m_ObjectHideFlags: 0
@@ -1136,7 +1143,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397730858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 12, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1274,7 +1281,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490135953}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 4.5, z: 0}
+  m_LocalPosition: {x: 0, y: 4.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 280747663}
@@ -1718,6 +1725,7 @@ GameObject:
   - component: {fileID: 707193492}
   - component: {fileID: 707193491}
   - component: {fileID: 707193490}
+  - component: {fileID: 707193495}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -1839,6 +1847,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &707193495
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707193489}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dfb4fbb0ab54f58418fe12681a8baf3c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &763901214
 GameObject:
   m_ObjectHideFlags: 0
@@ -4775,6 +4802,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 5122742057862832392, guid: 65bbaf6d08e9bcc46a177c81e903e7e1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5122742057862832398, guid: 65bbaf6d08e9bcc46a177c81e903e7e1,
         type: 3}
       propertyPath: m_RootOrder
@@ -4783,12 +4815,12 @@ PrefabInstance:
     - target: {fileID: 5122742057862832398, guid: 65bbaf6d08e9bcc46a177c81e903e7e1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.64
+      value: 7.33
       objectReference: {fileID: 0}
     - target: {fileID: 5122742057862832398, guid: 65bbaf6d08e9bcc46a177c81e903e7e1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.15
       objectReference: {fileID: 0}
     - target: {fileID: 5122742057862832398, guid: 65bbaf6d08e9bcc46a177c81e903e7e1,
         type: 3}

@@ -5,12 +5,17 @@ using UnityEngine;
 public class PipeSpwan : MonoBehaviour
 {
     public GameObject pipes;
+    public GameObject tree;
 
     public float timeSpwan;
     public float startTimeSpwan;
     private float yPos;
 
+    public float treeTimeSpwan;
+    public float treeStartTimeSpwan;
+
     public Vector3 spwanPos;
+    public Vector3 treeSpwanPos;
     void Start()
     {
         
@@ -21,6 +26,7 @@ public class PipeSpwan : MonoBehaviour
     {
         yPos = Random.Range(-2.45f, 2.15f);
         spwanPos = new Vector3(transform.position.x, yPos, transform.position.z);
+        treeSpwanPos = new Vector3(transform.position.x, -2.3f, transform.position.z);
         
         if (timeSpwan <= 0)
         {
@@ -30,6 +36,19 @@ public class PipeSpwan : MonoBehaviour
         else
         {
             timeSpwan -= Time.deltaTime;
+            
         }
+
+        //if (treeTimeSpwan <= 0)
+        //{
+            //Instantiate(tree, treeSpwanPos, transform.rotation);
+            //treeTimeSpwan = treeStartTimeSpwan;
+        //}
+        //else
+        //{
+            //treeTimeSpwan -= Time.deltaTime;
+        //}
+        
+        
     }
 }

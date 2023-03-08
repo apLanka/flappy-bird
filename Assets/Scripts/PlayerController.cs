@@ -8,10 +8,12 @@ public class PlayerController : MonoBehaviour
 {
     public float force;
     private Rigidbody2D rb;
+    private Animator anim;
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     
@@ -20,10 +22,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             rb.velocity = Vector2.up * force;
+            anim.SetBool("Clicked", true);
         }
         else
         {
-            return;
+            anim.SetBool("Clicked", false);
         }
     }
 
