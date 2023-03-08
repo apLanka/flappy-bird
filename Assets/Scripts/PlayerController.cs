@@ -3,12 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public float force;
     private Rigidbody2D rb;
     private Animator anim;
+
+    public Text scoreText;
+    public int scoreCount;
     
     void Start()
     {
@@ -34,5 +38,14 @@ public class PlayerController : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-   
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("PipeScore")) ;
+        {
+            scoreCount++;
+            scoreText.text = scoreCount.ToString();
+
+        }
+    }
 }
